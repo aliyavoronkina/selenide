@@ -17,6 +17,9 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Start application
         run: java -jar ./artifacts/app-card-delivery.jar &
 
