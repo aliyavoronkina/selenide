@@ -23,8 +23,5 @@ jobs:
       - name: Start application
         run: java -jar ./artifacts/app-card-delivery.jar &
 
-      - name: Wait for app to start
-        run: sleep 10
-
       - name: Run tests
-        run: ./gradlew test -Dselenide.headless=true
+        run: ./gradlew test --info -Dselenide.headless=true
